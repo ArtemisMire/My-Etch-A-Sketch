@@ -33,7 +33,9 @@ main {
 a {
     font-style: italic;
     color:#ffffff;
-
+}
+a:hover {
+    opacity: 0.8;
 }
 code {
     background-color: #757575;
