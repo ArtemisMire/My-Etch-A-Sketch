@@ -4,20 +4,36 @@
 }
 body {
     margin: 0px;
-    color: rgb(48, 48, 48)
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
-#header {
+header {
     font-family:  'Undo';
     font-size: 62px;
     padding-top: 18px;
     text-align: center;
 }
+main {
+    flex: 1;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
+
 
 #content {
     display: flex;
     justify-content: center;
     padding: 24px 0;
     gap: 42px;
+}
+a {
+    font-style: italic;
+    color:#ffffff;
+
 }
 code {
     background-color: #757575;
@@ -28,14 +44,12 @@ code {
 #someContent {
     max-width: 340px;
     font-size: 22px;
-    font-family: sans-serif;
     margin: 0px;
     box-sizing: border-box;
     padding-left: 30px;
     padding-right: 18px;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     background-color:rgb(48, 48, 48);
-
 }
 .title {
     font-size: 32px;
@@ -88,6 +102,7 @@ button {
     border: none;
     opacity: 80%;
     transition: 0.2s;
+    cursor: pointer;
 }
 button:hover {
     opacity: 1;
@@ -98,7 +113,7 @@ button:active {
 #pallete {
     width: 160px;
     height: 75px;
-    background-color: white;
+    background-color: #ffffff;
     border: none;
     cursor: pointer;
     opacity: 80%;
@@ -119,7 +134,6 @@ button:active {
     margin-top: 16px;
 }
 .sizeText {
-    font-family: sans-serif;
     font-size: 32px;
     align-items: center;
 }
@@ -141,7 +155,7 @@ button:active {
     -webkit-appearance: none;
     width: 40px;
     height: 40px;
-    background-color: #161616;
+    background-color: rgb(48, 48, 48);
     cursor: pointer;
 }
 #gridSize::-moz-range-thumb {
@@ -149,4 +163,16 @@ button:active {
     height: 40px;
     background-color: #04AA6D;
     cursor: pointer;
+}
+
+
+footer {
+    background-color: rgb(48, 48, 48);
+    text-align: center;
+    font-size: 20px;
+    color:#ffffff;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 6px;
 }
