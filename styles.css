@@ -1,16 +1,8 @@
- {
-    border: 1px solid red;
-}
 @font-face {
     font-family: 'Undo';
     src: url(edit-undo.brk.ttf);
 }
-@font-face {
-    font-family: 'Manrope';
-    src: url(manrope.zip);
-}
 body {
-    font-family: '';
     margin: 0px;
     color: rgb(48, 48, 48)
 }
@@ -23,13 +15,34 @@ body {
 
 #content {
     display: flex;
-    justify-content: space-between;
-    padding: 24px;
+    justify-content: center;
+    padding: 24px 0;
+    gap: 42px;
+}
+code {
+    background-color: #757575;
+    box-sizing: border-box;
+    padding: 3px;
+    font-size: 18px;
+}
+#someContent {
+    max-width: 340px;
+    font-size: 22px;
+    font-family: sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 18px;
+    color: rgb(255, 255, 255);
+    background-color:rgb(48, 48, 48);
+
+}
+.title {
+    font-size: 32px;
 }
 
 #cont {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -44,21 +57,75 @@ body {
 .cell {
     box-sizing: border-box;
     border: 1px solid rgba(223, 223, 223, 0.6);
-    background-color: white;;
+    background-color: white;
+}
+.cellHideBorder {
+    box-sizing: border-box;
+    background-color: white;
 }
 
 
-#sizeMenu {
+
+#tools {
+    display: flex;
+    flex-direction: column;
+    background-color: #b8b8b8;
+    border-radius: 12px;
+    padding: 18px;
+    max-width: 160px;
+    width: 100%;
+    gap: 18px;
+
+}
+button {
+    background-color: rgb(48, 48, 48);
+    color:#ffffff;
+    font-family: sans-serif;
+    font-size: 28px;
+    width: 160px;
+    height: 70px;
+    border-radius: 6px;
+    border: none;
+    opacity: 80%;
+    transition: 0.2s;
+}
+button:hover {
+    opacity: 1;
+}
+button:active {
+    scale: 0.95;
+}
+#pallete {
+    width: 160px;
+    height: 75px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 80%;
+}
+#pallete:hover {
+    opacity: 1;
+}
+#clearGrid {
+    margin-top: auto;
+}
+
+
+
+#sizeCont {
     display: flex;
     justify-content: center;
     gap: 48px;
+    margin-top: 16px;
 }
-#sizeText {
-    font-size: 24px;
+.sizeText {
+    font-family: sans-serif;
+    font-size: 32px;
+    align-items: center;
 }
 #gridSize {
     -webkit-appearance: none;
-    background-color: #d3d3d3;
+    background-color: #b8b8b8;
     outline: none;
     width: 500px;
     height: 40px;
@@ -74,7 +141,7 @@ body {
     -webkit-appearance: none;
     width: 40px;
     height: 40px;
-    background-color: #00ffa2;
+    background-color: #161616;
     cursor: pointer;
 }
 #gridSize::-moz-range-thumb {

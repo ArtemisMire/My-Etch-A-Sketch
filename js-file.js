@@ -1,5 +1,6 @@
 const inner = document.querySelector('#inner');
 const girdSize = document.querySelector('#gridSize');
+const currentSize = document.querySelector('#currentSize');
 inner.classList.toggle('inner');
 const div = document.createElement('div');
 let cubeSize = (600 / 16);
@@ -13,7 +14,6 @@ for (i = 0; i < 16; i++) {
 };
 
 girdSize.addEventListener('click', (e) => {
-    console.log(girdSize.value);
     let size = girdSize.value;
     let cubeSize = (600 / size);
     div.style.width = (cubeSize + "px");
@@ -25,6 +25,7 @@ girdSize.addEventListener('click', (e) => {
             inner.appendChild(div.cloneNode(true));
         };
     };
+    currentSize.textContent = `${size} x  ${size}`;
     cells = document.querySelectorAll('.cell');
     coloredCells = [];
     changeCellColor(cells);
@@ -36,6 +37,7 @@ const tools = document.querySelector('#tools');
 
 let currentTool = '';
 var currentColor = 'black';
+
 function getCurrentTool(tools) {
     tools.addEventListener('click', event => {        
         let target = event.target;
@@ -52,15 +54,14 @@ function getCurrentTool(tools) {
             case 'pallete' :
                 currentTool = 'pallete';
                 break;
-        };
-    });
+            };
+    });         
 }
 
 function getCurrentColor(currentTool) {
     if (currentTool == 'eraser') currentColor = 'white';
     else if (currentTool == 'pallete') {
         currentColor = document.querySelector('#pallete').value;
-        console.log(currentColor, currentTool);
     }
     return currentColor;
 }
