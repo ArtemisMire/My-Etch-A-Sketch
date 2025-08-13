@@ -12,14 +12,16 @@ body {
 }
 header {
     font-family:  'Undo';
-    font-size: 62px;
-    padding-top: 18px;
+    font-size: 80px;
+    margin-top: 20px;
     text-align: center;
 }
 main {
     flex: 1;
     font-family: sans-serif;
-    margin-top: 20px;
+    margin-top: 10px;
+    box-sizing: border-box;
+
 }
 
 
@@ -47,6 +49,7 @@ code {
     max-width: 340px;
     font-size: 22px;
     margin: 0px;
+    margin-left: 20px;
     box-sizing: border-box;
     padding-left: 30px;
     padding-right: 18px;
@@ -81,7 +84,12 @@ code {
 }
 
 
-
+#innerTools {
+    max-width: 340px;
+    margin-right: 20px;
+    width: 100%;
+    display: flex;
+}
 #tools {
     display: flex;
     flex-direction: column;
@@ -132,12 +140,19 @@ button:active {
 #sizeCont {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 48px;
     margin-top: 16px;
 }
 .sizeText {
-    font-size: 32px;
-    align-items: center;
+    font-size: 30px;
+    max-width: 170px;
+    width: 100%;
+    text-align: center;
+}
+
+#currentSize {
+    text-align: end;
 }
 #gridSize {
     -webkit-appearance: none;

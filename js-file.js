@@ -80,8 +80,7 @@ function changeCellColor(cells) {
             if (currentTool != 'rgb') getCurrentColor(currentTool);
             else if (currentTool == 'rgb') currentColor = `rgb(${getRandomColor()})`;
             cell.style.background = currentColor;
-            
-            coloredCells.push(cell);
+            if (!coloredCells.includes(cell)) coloredCells.push(cell);
         });
     });
 }
